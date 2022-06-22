@@ -7,8 +7,14 @@ pragma solidity ^0.8.7;
 **/
 
 contract FunctionVisibility {
-    uint value; //variable to store an unsigned integer of 256 bits
-
+    /**
+        Variable to store an unsigned integer of 256 bits.
+        Private by default(accessible only in this contract)
+        If it was 'internal' it would be visible to this contract and child contracts
+        If it was 'public' it would be visible inside/outside this contract
+    **/
+    uint value; 
+    
     /**
         Function with private modifier can ONLY be called/accessed inside this contract. 
     **/
